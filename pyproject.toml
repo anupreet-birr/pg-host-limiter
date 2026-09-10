@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pg-host-limiter"
+version = "0.1.0"
+description = "Coordinate per-host request concurrency and cooldowns across workers using PostgreSQL."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+authors = [{name = "anupreet-birr"}]
+dependencies = ["psycopg>=3.2,<4"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Topic :: Internet :: WWW/HTTP",
+]
+
+[project.urls]
+Homepage = "https://github.com/anupreet-birr/pg-host-limiter"
+Issues = "https://github.com/anupreet-birr/pg-host-limiter/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
